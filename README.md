@@ -21,7 +21,7 @@ SELECT
 FROM credit_risk
 GROUP BY person_home_ownership
 ORDER BY tasa_mora_porcentaje DESC;
-
+````
 #### Resultados obtenidos 
 
 |tipo_vivienda|total_clientes|tasa_mora_porcentaje|
@@ -45,7 +45,7 @@ SELECT
 FROM credit_risk
 GROUP BY loan_intent
 ORDER BY tasa_mora_porcentaje DESC;
-
+````
 #### Resultados obtenidos 
 
 |destino_credito|total_solicitudes|tasa_mora_porcentaje|
@@ -72,7 +72,7 @@ SELECT
     ROUND(AVG(loan_percent_income) * 100, 2) AS porcentaje_ingreso_comprometido_promedio
 FROM credit_risk
 GROUP BY loan_status;
-
+````
 #### Resultados obtenidos 
 
 |estado_pago|total_casos|porcentaje_ingreso_comprometido_promedio|
@@ -112,7 +112,7 @@ WHERE person_income < 40000
 GROUP BY person_home_ownership, loan_intent
 HAVING AVG(loan_status) > 0.30 
 ORDER BY tasa_mora_porcentaje DESC;
-
+````
 
 #### Resultados obtenidos 
 
